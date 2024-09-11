@@ -29,7 +29,13 @@ Este proyecto sigue los siguientes pasos:
 5. **Evaluación del modelo**: Se evalúa el rendimiento del modelo utilizando métricas como el RMSE (Root Mean Square Error).
 6. **Visualización**: Se generan gráficos para mostrar la relación entre las variables y el desempeño del modelo.
 
-🥸 Autor
-Created with ❤ by Diego Villagrán
+## 🥸 Autor
 
-<a href="https://linkedin.com/in/dvillagrans" target="_blank"> <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" /> </a> <a href="https://github.com/dvillagrans" target="_blank"> <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" /> </a> ```
+Created with ❤ by Diego Villagran
+
+<a href="https://linkedin.com/in/dvillagrans" target="_blank">
+<img src="https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin" style="margin-bottom: 5px;" />
+</a>
+<a href="https://github.com/dvillagrans" target="_blank">
+<img src="https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white" alt="github" style="margin-bottom: 5px;" />
+</a>
