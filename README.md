@@ -1,41 +1,107 @@
-# 🏡 House Price Prediction Project
+# House Price Prediction
 
-Este repositorio contiene un proyecto de predicción de precios de casas desarrollado para analizar diversos factores que influyen en los valores de las propiedades. El modelo está diseñado para predecir los precios de las casas basándose en características como el tamaño, el número de habitaciones, la ubicación, y otros aspectos clave. Se utilizó Python, junto con librerías como pandas, scikit-learn y matplotlib, para construir, entrenar y evaluar el modelo predictivo.
+A supervised machine learning project that predicts residential property sale prices using the Ames Housing dataset. The pipeline covers exploratory data analysis, feature engineering, model training with linear regression, and evaluation using standard regression metrics.
 
-![house-price-prediction-img](https://i.postimg.cc/something/house-price-prediction.png)
+![Project preview](Precio-casas.png)
 
-## ✅ Requisitos
+---
 
-Para ejecutar este proyecto, se recomienda tener las siguientes herramientas instaladas en tu sistema:
+## Overview
 
-- Python 3.8 o superior
+The Ames Housing dataset contains 1,460 training observations and 79 features describing residential properties in Ames, Iowa. The goal is to build a regression model that accurately estimates the final sale price (`SalePrice`) based on those features.
+
+This project was built as a practical exercise in the end-to-end data science workflow: from raw data to a deployable prediction interface.
+
+---
+
+## Dataset
+
+| Split       | Records |
+|-------------|---------|
+| Training    | 1,460   |
+| Test        | 1,459   |
+| Features    | 79      |
+
+Key feature groups:
+
+- **Numerical**: lot area, living area, basement area, year built, number of bathrooms and bedrooms.
+- **Categorical**: neighborhood, zoning classification, roof style, garage type, overall quality rating.
+- **Target**: `SalePrice` — the final sale price in USD.
+
+---
+
+## Pipeline
+
+1. **Data loading** — CSV ingestion and initial schema inspection.
+2. **Exploratory Data Analysis (EDA)** — distribution analysis, correlation heatmaps, and outlier detection.
+3. **Preprocessing** — missing value imputation, categorical encoding, and numerical normalization.
+4. **Feature engineering** — selection and transformation of the most predictive variables.
+5. **Model training** — linear regression via scikit-learn with K-Fold cross-validation.
+6. **Evaluation** — RMSE and R² score computation on the validation set.
+7. **Visualization** — matplotlib and seaborn plots for residual analysis and prediction distribution.
+
+---
+
+## Requirements
+
+- Python 3.8 or higher
 - Jupyter Notebook
-- Librerías: pandas, numpy, scikit-learn, matplotlib, seaborn
 
-Instala las dependencias necesarias utilizando el siguiente comando:
+Install all dependencies:
 
 ```sh
 pip install -r requirements.txt
 ```
 
-## 🔩 Funcionamiento
+Core libraries used:
 
-Este proyecto sigue los siguientes pasos:
+| Library      | Purpose                          |
+|--------------|----------------------------------|
+| pandas       | Data manipulation                |
+| numpy        | Numerical computing              |
+| scikit-learn | Modeling, preprocessing, metrics |
+| matplotlib   | Static visualizations            |
+| seaborn      | Statistical plots                |
 
-1. **Carga de datos**: El dataset se carga desde un archivo CSV con información de las propiedades.
-2. **Exploración y análisis de datos**: Se realiza un análisis exploratorio de los datos para identificar tendencias y relaciones entre las variables.
-3. **Preprocesamiento de datos**: Se limpian los datos y se transforman para que puedan ser usados por el modelo de machine learning.
-4. **Entrenamiento del modelo**: Se entrena un modelo de regresión lineal para predecir el precio de las casas en función de sus características.
-5. **Evaluación del modelo**: Se evalúa el rendimiento del modelo utilizando métricas como el RMSE (Root Mean Square Error).
-6. **Visualización**: Se generan gráficos para mostrar la relación entre las variables y el desempeño del modelo.
+---
 
-## 🥸 Autor
+## Project structure
 
-Created with ❤ by Diego Villagran
+```
+Houses-Prices-Prediction/
+├── Final_Project.ipynb        # Main notebook with the full pipeline
+├── house-prices/
+│   ├── house_prices.csv       # Training data
+│   ├── test.csv               # Test data
+│   └── data_description.txt   # Feature documentation
+├── house-prices-web/          # Next.js presentation site with interactive predictor
+└── README.md
+```
+
+---
+
+## Interactive web interface
+
+The `house-prices-web/` directory contains a Next.js application that presents the project and includes a live price predictor. Adjust property features with sliders and see how the regression model updates the estimated price in real time.
+
+To run it locally:
+
+```sh
+cd house-prices-web
+npm install
+npm run dev
+```
+
+---
+
+## Author
+
+Diego Villagran
 
 <a href="https://linkedin.com/in/dvillagrans" target="_blank">
-<img src="https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin" style="margin-bottom: 5px;" />
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
 </a>
+&nbsp;
 <a href="https://github.com/dvillagrans" target="_blank">
-<img src="https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white" alt="github" style="margin-bottom: 5px;" />
+<img src="https://img.shields.io/badge/GitHub-24292e?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 </a>
